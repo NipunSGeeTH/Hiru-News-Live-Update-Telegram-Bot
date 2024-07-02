@@ -20,7 +20,7 @@ logging.basicConfig(
 )
 
 # Replace with your actual bot tokens
-BOT_TOKEN_1 = "73904662:AAGwAFrayaN5mOT_c6RODUK7TEeS"
+BOT_TOKEN_1 = "YOUR_TELEGRAM_BOT_TOKEN"
 
 
 # Define the /start command handler for the first bot
