@@ -21,12 +21,12 @@ logging.basicConfig(
 )
 
 # Replace with your actual bot tokens
-BOT_TOKEN_1 = '2105136389:AAE0QuJHhnoQa_DY-9rV2pLM_AU1A5z5gfI'
+BOT_TOKEN_1 = '21037389:AAEJHhnoQa_DY-92pLffdM_AU5gfI'
 
 
 # Define the /start command handler for the first bot
 
-# Define the /start command handler for the second bot
+
 
 try:
     with open('telegramID.json', 'r') as f:
@@ -61,14 +61,6 @@ async def start_bot1(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f" Developped by NipunSGeeTH"
 
     )
-
-
-
-
-
-
-
-
 
 
 
@@ -117,27 +109,18 @@ async def send_news_updates(application, news):
         with open('telegramID.json', 'r') as f:
             user_data = json.load(f)
 
-        
-
-
+     
 
         for user in user_data:
             user_id = user['id']
             try:
                 await application.bot.send_photo(
-
                 chat_id=user_id,
                 photo='a_with_logo.jpg',
                 parse_mode='Markdown',
                 caption=' 🟢 '+'*' + message+ '*'+' 🟢 '+'\n\n'  +  news_content +'\n\n'  +'@NsDevSpace',
                 reply_markup=reply_markup,
-                
-        
-        
-            )
-
-                
-                
+                )    
             except Forbidden:
                 print(f"Bot was blocked by user ID {user_id}. Skipping.")
                 # Optionally, log this information or take other actions
@@ -148,17 +131,7 @@ async def send_news_updates(application, news):
                 else:
                     raise
 
-
-       
-        
-        
-        
-
-        
-
-
-        
-        
+     
        
 # Main function to handle the updating and sending of news
 async def main():
@@ -170,52 +143,8 @@ async def main():
         check_New_News.get_and_save_latest_news()
         with open('Latest_News.json', 'r', encoding='utf-8') as file:
             latest_news = json.load(file)
-        
-        
-
-
-
-
-
-
-
-
-
-        
-
         await  send_news_updates(application, latest_news)
-        
-
-
-
-
-
-
-        
-
         await asyncio.sleep(320)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Function to start the first bot
