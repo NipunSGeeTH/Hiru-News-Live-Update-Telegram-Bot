@@ -20,7 +20,7 @@ logging.basicConfig(
 )
 
 # Replace with your actual bot tokens
-BOT_TOKEN_1 = "7390364662:AAGwAFrayaN5mOT_c6RODUK7TEeSmyoPZvw"
+BOT_TOKEN_1 = "73904662:AAGwAFrayaN5mOT_c6RODUK7TEeS"
 
 
 # Define the /start command handler for the first bot
